@@ -1,3 +1,9 @@
+---
+layout: page
+title: Guide to Create your own Website in GitHub
+permalink: https://kparsonsdesign.github.io/github_website_guide
+---
+
 # How to Create your own Website in GitHub
 
 Want to create a portfolio website, but don't want to deal with your own web hosting? GitHub is a great option to create a web page that you can share with others, especially for those interested in coding and software.
