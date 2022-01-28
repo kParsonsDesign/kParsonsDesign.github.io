@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Guide to Create your own Website in GitHub
-permalink: https://kparsonsdesign.github.io/github_website_guide
 ---
 
 # How to Create your own Website in GitHub
