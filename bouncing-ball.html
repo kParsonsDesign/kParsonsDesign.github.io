@@ -1,0 +1,291 @@
+<h2>Programing Simulations</h2>
+
+<ol>
+  <strong>Things to keep track of when creating a simulation:</strong>
+  <li>Time</li>
+  <li>Position</li>
+</ol>
+
+<p>
+  Imagine a person jumping forward in time. They jump, they move up and forward,
+  it takes time.
+</p>
+
+<p>
+  <strong>Example:</strong> Imagine a case where every 3 seconds (3000
+  milliseconds) your jumping person moves forward (to the right) 5 units. 3000
+  milliseconds elapse, the position moves from 0 to 5. 3000 more milliseconds
+  elapse and the position moves from 5 to 10.
+</p>
+
+<pre>
+var time     = 3000;
+var position = 0;
+var velocity = 5;
+
+function myFunction() {
+    position = position + velocity;
+    console.log(position);
+}
+
+setInterval(myFunction, time)
+    
+Remember: window.clearInterval() will stop the timer.
+</pre>
+
+<script>
+  /*************************************
+   *
+   * Active Learning - Simulating Motion Simple
+   *
+   * **********************************/
+
+  // var time     = 3000;
+  // var position = 0;
+  // var velocity = 5;
+  //
+  // function myFunction() {
+  //     position = position + velocity;
+  //     console.log(position);
+  // }
+  //
+  // setInterval(myFunction, time)
+
+  // Remember: window.clearInterval() will stop the timer.
+
+  /*
+   * Questions:
+   *
+   * 1. How rich could this computational environment be?
+   * 2. What could you use this for?
+   * 3. How do you think about the physical world an position?
+   * 4. How can you use this in your own context?
+   *
+   */
+</script>
+
+<h2>One Dimensional Motion</h2>
+
+<p>Apply concepts to the shapes defined in the browser coordinate system.</p>
+
+<script>
+  /***********************************************
+   *
+   * Simple Ball Movement Code
+   *
+   * ********************************************/
+
+  /*
+<div id="ballA" style="
+  z-index:5;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:green"></div>
+
+
+
+var velocity = 1;
+var position = 0;
+var ballA = document.getElementById('ballA');
+
+// YOUR CODE 
+// ----------------
+var time = 1;
+function moveBall() {
+  position = position + velocity;
+  ballA.style.left = position + 'px';
+}
+
+function stopBall() {
+  window.clearInterval(1)
+}
+
+// move ball
+setInterval(moveBall, time);
+
+// stop ball
+setTimeout(stopBall, 3000);
+*/
+</script>
+
+<h2>Edge Detection</h2>
+
+<p>Without edge detection the ball keeps moving off the page.</p>
+
+<p>
+  Goal: set dimensions to keep movement constrained within. (Figure it out
+  yourself without looking at any answers first!)
+</p>
+
+<pre></pre>
+
+<script></script>
+
+<!-- ******************************************* 
+
+        Get Creative!
+    
+    ******************************************** -->
+
+<h2>Get Creative</h2>
+<p>
+  The bonus exercise and possible future app idea involve getting creative with
+  the bouncy ball idea
+</p>
+
+<p><strong>Things to do with a bouncy ball simulator:</strong></p>
+
+<ul>
+  <li>Change the speed of the ball on every bounce</li>
+  <li>Change the speed of the ball during bounce</li>
+  <li>Change the color on bounce</li>
+  <li>Change the color based on the x-direction</li>
+  <li>Change the color based on the y-direction</li>
+  <li>Change the size of the ball on bounce</li>
+  <li>Have multiple balls moving at different speeds</li>
+  <li>Have collision detection</li>
+</ul>
+
+<h2>Simple Add Balls Inside a box</h2>
+
+<!-- Add ball button -->
+<button id="addBall" style="margin: 5px" onclick="createBall()">
+  Add a Ball
+</button>
+
+<!-- Stop all balls button-->
+<button id="stopBalls" style="margin: 5px" onclick="stopBalls()">
+  Stop all Balls
+</button>
+
+<!-- Remove all balls button -->
+<button id="clearBalls" style="margin: 5px;" onclick="clearBox()">
+  Remove all Balls
+</button>
+
+<!-- Balls bounding box -->
+<div
+  id="boundingBox"
+  style="
+    z-index: 4;
+    position: relative;
+    width: 700px;
+    height: 400px;
+    border: 1px solid black;
+  "
+></div>
+
+<!-- Challenge Bouncy Ball Code -->
+<script>
+  // Get bounding box info
+  let boundingBox = document.getElementById("boundingBox");
+  let width = boundingBox.clientWidth;
+  let height = boundingBox.clientHeight;
+
+  // Return random integer function (inclusive)
+  function getRandomInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  // Keep track of balls
+  let numberOfBalls = 0;
+
+  // Create random ball
+  function createBall() {
+    // keep track of balls
+    numberOfBalls = numberOfBalls + 1;
+
+    // random ball size
+    let ballSize = getRandomInteger(10, 50);
+    let Xmax = width - ballSize; // bounding box based on ball size
+    let Ymax = height - ballSize; // bounding box based on ball size
+
+    // random start location
+    let positionX = Math.floor(Math.random() * width);
+    let positionY = Math.floor(Math.random() * height);
+    if (positionX > Xmax) positionX = Xmax;
+    if (positionY > Ymax) positionY = Ymax;
+
+    // random ball speed
+    let speed = getRandomInteger(1, 10);
+
+    // random ball movement
+    let xDirection = Boolean(getRandomInteger(0, 1));
+    let yDirection = Boolean(getRandomInteger(0, 1));
+
+    // color options
+    // clean: hsl(170, 32%, 74%)
+    // butter: hsl(42, 80%, 74%)
+    // salmon: hsl(11, 44%, 62%)
+    // eggplant: hsl(338, 28%, 41%)
+    // navy: hsl(217, 46%, 37%)
+    let colorChoices = [
+      "hsl(170, 32%, 74%)",
+      "hsl(42, 80%, 74%)",
+      "hsl(11, 44%, 62%)",
+      "hsl(338, 28%, 41%)",
+      "hsl(217, 46%, 37%)",
+    ];
+
+    // cycle color chooser
+    let colorNumber = numberOfBalls % 5;
+    let color = colorChoices[colorNumber];
+
+    // set ball div options
+    let div = document.createElement("div");
+    div.id = "ball" + numberOfBalls;
+    div.style.zIndex = "1";
+    div.style.position = "absolute";
+    div.style.left = positionX + "px";
+    div.style.top = positionY + "px";
+    div.style.width = ballSize;
+    div.style.height = ballSize;
+    div.style.borderRadius = "50%";
+    div.style.background = color;
+
+    // Then append the whole thing onto the body
+    boundingBox.appendChild(div);
+
+    // move ball function
+    function moveBall() {
+      // move ball forward x-axis
+      if (xDirection) {
+        positionX = positionX + speed;
+      } else {
+        positionX = positionX - speed;
+      }
+      div.style.left = positionX + 'px';
+
+      // move ball up down y-axis
+      if (yDirection) {
+        positionY = positionY + speed;
+      } else {
+        positionY = positionY - speed;
+      }
+      div.style.top = positionY + 'px';
+
+      // reverse X direction
+      if ( positionX >= Xmax || positionX <= 0 ) {
+        xDirection = !xDirection;
+      }
+
+      // reverse y direction
+      if ( positionY >= Ymax || positionY <= 0 ) {
+        yDirection = !yDirection;
+      }
+    }
+
+    // move the ball timer
+    setInterval(moveBall, 10);
+  }
+
+  function stopBalls() {}
+
+  function clearBox() {
+    document.getElementById('boundingBox').innerHTML = '';
+  }
+</script>
