@@ -1,0 +1,87 @@
+<html>
+  <head></head>
+  <body>
+    <h1>Pac Man Exercise!</h1>
+    <p><strong>Click PacMan to start him moving or use the button.</strong> <button id="pacButton" onclick="toggle()">Start PacMan</button></p>
+    <!--<div
+      style="
+        display: block;
+        width: 100%;
+        height: 500px;
+        border: solid black 2px;
+      "
+    >-->
+      <img
+        id="PacMan"
+        src="PacMan1.png"
+        width="200"
+        onclick="toggle()"
+        style="position: absolute; z-index: 5;"
+      />
+    <!--</div>-->
+  </body>
+  <script>
+    var pos = 0;
+    const pacArray = [
+      ["PacMan1.png", "PacMan2.png"], // left to right
+      ["PacMan3.png", "PacMan4.png"], // right to left
+    ];
+    var direction = 0; // 0 is false
+    var focus = 0; // allows for open or closed PacMan mouth
+    var moving = false;
+    var img = document.getElementById("PacMan");
+
+    function toggle() {
+      // button
+      let pacButton = document.getElementById('pacButton');
+      let pacButtonText = ['Start PacMan', 'Stop PacMan'];
+      if (pacButton.textContent == pacButtonText[0]) {
+        pacButton.textContent = pacButtonText[1];
+      } else {
+        pacButton.textContent = pacButtonText[0];
+      }
+
+      // movement
+      if (moving === false) {
+        moving = true;
+        run();
+      } else {
+        moving = false;
+      }
+    }
+
+    function run() {
+      let imgWidth = img.width;
+      focus = (focus + 1) % 2;
+      direction = checkPageBounds(direction, imgWidth);
+      img.src = pacArray[direction][focus];
+      if (direction) {
+        pos -= 20;
+        img.style.left = pos + "px";
+      } else {
+        pos += 20;
+        img.style.left = pos + "px";
+      }
+      // Use setTimeout to call Run every 200 millesecs
+      if (moving) {
+        let pacManTimer = setTimeout(run, 200);
+        //console.log(pacManTimer);
+      }
+    }
+
+    function checkPageBounds(direction, imgWidth) {
+      let boundMax = window.innerWidth;
+
+      if (pos + imgWidth >= boundMax || pos < 0) {
+        if (direction === 0) {
+          direction = 1;
+        } else {
+          direction = 0;
+        }
+      }
+
+      return direction;
+    }
+
+  </script>
+</html>
