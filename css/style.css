@@ -1,0 +1,39 @@
+.avatar {
+  max-width: 200px;
+  margin: 10px;
+}
+
+.title {
+  font-family: 'Redressed', cursive;
+  font-size: 48px;
+}
+
+/* Color Scheme */
+.primary {
+  color: #2E6D92;
+}
+
+.bg-primary {
+  background-color: #2E6D92;
+}
+
+.success {
+  color: #46B3A5;
+}
+
+.info {
+  color: lightblue;
+}
+
+.warning {
+  color: #F6D68D;
+}
+
+.danger {
+  color: #FE4773;
+}
+
+/*$secondary: ;*/
+/*$light: ;
+$dar: ;*/
+/*# sourceMappingURL=style.css.map */
