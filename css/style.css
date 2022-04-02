@@ -37,3 +37,8 @@
 /*$light: ;
 $dar: ;*/
 /*# sourceMappingURL=style.css.map */
+
+/* Card Effects */
+.card-img-top:hover text {
+  text-shadow: 2px 2px 4px black;
+}
