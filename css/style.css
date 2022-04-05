@@ -1,7 +1,14 @@
 .avatar {
-  max-width: 200px;
-  margin: 10px;
+  max-width: 6rem;
+  margin-top: .4rem;
 }
+.avatar-nav {
+  position: absolute;
+  max-width: 4rem;
+  margin: 0;
+  margin-top: 1rem;
+}
+
 
 .title {
   font-family: 'Redressed', cursive;
@@ -39,6 +46,19 @@ $dar: ;*/
 /*# sourceMappingURL=style.css.map */
 
 /* Card Effects */
+.card-img-top {
+  position: relative;
+}
 .card-img-top:hover text {
-  text-shadow: 2px 2px 4px black;
+  text-shadow: 2px 2px 5px lightslategray;
+  /* text-shadow: 2px 2px 5px hsla(210, 14%, 53%); */
+}
+
+.card-img-top:hover > circle,
+.card-img-top:hover > svg {
+  filter: drop-shadow(2px 2px 5px hsl(210, 14%, 53%));
+}
+
+.flipx {
+  transform: scaleX(-1);
 }
