@@ -49,6 +49,21 @@ $dar: ;*/
 .card-img-top {
   position: relative;
 }
+
+div.card-img-top {
+  display: block;
+}
+
+.bus-tracker-thumb {
+  background-image: url(../assets/images/Bus-Tracker-Thumbnail.png);
+  background-size: cover;
+}
+
+.bus-tracker-thumb > text {
+  text-shadow: 2px 2px 3px white;
+  font-weight: bolder;
+}
+
 .card-img-top:hover text {
   text-shadow: 2px 2px 5px lightslategray;
   /* text-shadow: 2px 2px 5px hsla(210, 14%, 53%); */
