@@ -90,7 +90,7 @@ window.onload = () => {
     }
 
     // continue moving
-    pacTimer = setTimeout(movePacMan, 200);
+    pacTimer = setTimeout(movePacMan, 150);
   }
 
   function stopPacMan() {
