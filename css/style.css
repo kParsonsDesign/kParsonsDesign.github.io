@@ -59,9 +59,21 @@ div.card-img-top {
   background-size: cover;
 }
 
-.bus-tracker-thumb > text {
+.bus-tracker-thumb > text,
+.big-data-thumb > text {
   text-shadow: 2px 2px 3px white;
   font-weight: bolder;
+}
+
+.big-data-thumb {
+  background-image: url(../assets/images/bigdata-screenshot-table.png);
+  background-size: cover;
+}
+
+.eye-move-thumb {
+  background-image: url(../assets/images/eye-movement-thumbnail.png);
+  background-size: cover;
+  background-position: center;
 }
 
 .card-img-top:hover text {
