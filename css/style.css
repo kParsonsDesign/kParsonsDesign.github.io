@@ -50,10 +50,10 @@ a:active {
   color: var(--color-primary-dark);
 }
 
-a.navbar-brand:hover {
-  /* nav home link underline */
-  /* text-decoration: none; */
-}
+/* a.navbar-brand:hover {
+  nav home link underline
+  text-decoration: none;
+} */
 
 .bullet-none {
   list-style-type: none;
