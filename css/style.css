@@ -1,7 +1,161 @@
+:root {
+  --color-primary: #2e6d92;
+  --color-primary-dark: #103d58;
+  --color-success: #46B3A5;
+  --color-info: lightblue;
+  --color-warning: #F6D68D;
+  --color-danger: #FE4773;
+  /* other colors:
+  secondary
+  dark
+  light
+  */
+}
+
+body {
+  font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+main {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.font-weight-light {
+  font-weight: 300;
+}
+
+.font-weight-heavy {
+  font-weight: 700;
+}
+
+.text-left {
+  text-align: start;
+}
+
+.text-right {
+  text-align: end;
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+a:hover,
+a:active {
+  text-decoration: underline;
+  color: var(--color-primary-dark);
+}
+
+a.navbar-brand:hover {
+  /* nav home link underline */
+  /* text-decoration: none; */
+}
+
+.bullet-none {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* Navigation */
+.navbar-nav {
+  margin-left: -4rem;
+}
+
+
+
+/* Home Page Grid */
+.heading-container {
+  display: grid;
+  text-align: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  padding: 3rem;
+  gap: 2rem;
+  border-bottom: 1px solid darkgray;
+}
+
+.heading-container .heading {
+  grid-column: 1/3;
+}
+
+.heading-container .summary {
+  grid-column: 1/3;
+  /* padding-bottom: 3rem; */
+  border-bottom: 1px solid darkgray;
+}
+
+.heading-container img {
+  float: left;
+  max-width: 10rem;
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+
+.heading-container .video {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  padding-bottom: 2rem;
+}
+
+.heading-container .links {
+  grid-column: 2/3;
+  min-width: 220px;
+  max-width: 450px;
+  margin: 1rem auto;
+}
+
+.heading-container .links h3:nth-of-type(2) {
+  padding-top: 2rem;
+}
+
+.heading-container .portfolio-preview {
+  grid-column: 1/3;
+  bottom: 0;
+}
+
+@media screen and (max-width: 905px) {
+  .heading-container .video {
+    grid-column: 1/3;
+    grid-row: 4/5;
+  }
+  .heading-container .links {
+    grid-column: 1/3;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    column-gap: 5rem;
+  }
+  .heading-container .links h3:first-of-type {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .heading-container .links ul:first-of-type {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .heading-container .links h3:nth-of-type(2) {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    padding-top: 0;
+  }
+  .heading-container .links ul:nth-of-type(2) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+}
+
+
+/* Profile Images */
 .avatar {
   max-width: 6rem;
   margin-top: .4rem;
 }
+
 .avatar-nav {
   position: absolute;
   max-width: 4rem;
@@ -10,42 +164,42 @@
 }
 
 
-.title {
-  font-family: 'Redressed', cursive;
-  font-size: 48px;
+
+/* Home Page Carousel */
+.carousel-item {
+/* background-color: var(--dark-gray); */
+  overflow: hidden;
+  height: 300px;
 }
 
-/* Color Scheme */
-.primary {
-  color: #2E6D92;
+.carousel-item img {
+  height: 300px;
+  width: auto;
+  margin: auto;
 }
 
-.bg-primary {
-  background-color: #2E6D92;
+.carousel-item img.eye-move-thumb {
+  height: 500px;
+  margin-top: -150px;
 }
 
-.success {
-  color: #46B3A5;
+.carousel-item img.pacman-thumb {
+  background-color: hsla(208, 100%, 97%, 25%);
 }
 
-.info {
-  color: lightblue;
+.carousel-control-next:hover,
+.carousel-control-prev:hover {
+  background-color: hsla(208, 100%, 97%, 5%);
 }
 
-.warning {
-  color: #F6D68D;
+.carousel-item:hover .carousel-caption h5,
+.carousel-item:hover .carousel-caption p {
+  text-shadow: 2px 2px 5px hsl(0, 0%, 20%);
 }
 
-.danger {
-  color: #FE4773;
-}
 
-/*$secondary: ;*/
-/*$light: ;
-$dar: ;*/
-/*# sourceMappingURL=style.css.map */
 
-/* Card Effects */
+/* Project Page Card Effects */
 .card-img-top {
   position: relative;
 }
@@ -88,4 +242,31 @@ div.card-img-top {
 
 .flipx {
   transform: scaleX(-1);
+}
+
+
+
+/* Modifying Bootstrap Color Scheme */
+.primary {
+  color: #2E6D92;
+}
+
+.bg-primary {
+  background-color: #2E6D92;
+}
+
+.success {
+  color: #46B3A5;
+}
+
+.info {
+  color: lightblue;
+}
+
+.warning {
+  color: #F6D68D;
+}
+
+.danger {
+  color: #FE4773;
 }
