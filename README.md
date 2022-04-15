@@ -18,31 +18,41 @@ If you would like to view my projects individually they can be found at:
 
 #### Bouncing Balls:
 > Weeks 2, 3 & 7
+
 A project showcasing smooth movement and boundary detection.
+
 - Repo: [https://github.com/kParsonsDesign/bouncingBalls/](https://github.com/kParsonsDesign/bouncingBalls/)
 - Live page: [kParsonsDesign.github.io/bouncingBalls/](https://kParsonsDesign.github.io/bouncingBalls/)
 
 #### Pacman:
 > Weeks 4 and beyond
+
 A project moving a chomping Pacman within boundaries and including direction controls.
+
 - Repo: [https://github.com/kParsonsDesign/pacman/](https://github.com/kParsonsDesign/pacman/)
 - Live page: [kParsonsDesign.github.io/pacman/](https://kParsonsDesign.github.io/pacman/)
 
 #### Big Data:
 > Week 5
+
 A project sorting, searching and displaying a 20,000+ line data table.
+
 - Repo: [https://github.com/kParsonsDesign/bigData/](https://github.com/kParsonsDesign/bigData/)
 - Live page: [kParsonsDesign.github.io/bigData/](https://kParsonsDesign.github.io/bigData/)
 
 #### Eye Movement:
 > Week 8
+
 A project having on screen eyes follow mouse movements.
+
 - Repo: [https://github.com/kParsonsDesign/eyemovement/](https://github.com/kParsonsDesign/eyemovement/)
 - Live page: [kParsonsDesign.github.io/eyemovement/](https://kParsonsDesign.github.io/eyemovement/)
 
 #### Bus Tracker:
 > Week 9
+
 A project displaying current bus locations as information is collected in real-time from Boston's Transit Authority.
+
 - Repo: [https://github.com/kParsonsDesign/bustracker/](https://github.com/kParsonsDesign/bustracker/)
 - Live page: [kParsonsDesign.github.io/bustracker/](https://kParsonsDesign.github.io/bustracker/)
 
