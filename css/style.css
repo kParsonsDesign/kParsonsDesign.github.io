@@ -208,13 +208,20 @@ div.card-img-top {
   display: block;
 }
 
+.many-pacmen-thumb {
+  background-image: url(../assets/images/many-pacmen-thumb.png);
+  background-size: cover;
+}
+
 .bus-tracker-thumb {
   background-image: url(../assets/images/Bus-Tracker-Thumbnail.png);
   background-size: cover;
 }
 
 .bus-tracker-thumb > text,
-.big-data-thumb > text {
+.big-data-thumb > text,
+.many-pacmen-thumb > text,
+.eye-move-thumb > text {
   text-shadow: 2px 2px 3px white;
   font-weight: bolder;
 }
