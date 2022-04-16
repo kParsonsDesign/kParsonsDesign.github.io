@@ -40,6 +40,14 @@ A project sorting, searching and displaying a 20,000+ line data table.
 - Repo: [https://github.com/kParsonsDesign/bigData/](https://github.com/kParsonsDesign/bigData/)
 - Live page: [kParsonsDesign.github.io/bigData/](https://kParsonsDesign.github.io/bigData/)
 
+#### Many Pacmen:
+> Week 7
+
+A project generating many Pacmen that start in random locations and move in random directions.
+
+- Repo: [https://github.com/kParsonsDesign/many-pacmen/](https://github.com/kParsonsDesign/many-pacmen/)
+- Live page: [kParsonsDesign.github.io/many-pacmen/](https://kParsonsDesign.github.io/many-pacmen/)
+
 #### Eye Movement:
 > Week 8
 
